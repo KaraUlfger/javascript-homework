@@ -59,8 +59,26 @@ function generatePassword() {
 // Selections of Confirm Section
 
   if (specialConfirm) {
-    selections = seclections.concat(special);
+    selections = selections.concat(special);
+  }
+
+  if (numbersConfirm) {
+    selections = selections.concat(numbers);
+  }
+
+  if (lowerConfirm) {
+    selections = selections.concat(alphabet)
+  }
+
+  if (upperConfirm) {
+    selections = selections.concat(cap)
   }
  console.log(selections)
+
+  function randomizer(){
+    results = [selections]
+  return results[Math.floor(Math.random()*prompt.length)]
+  }
+  console.log(randomizer)
 
 }
