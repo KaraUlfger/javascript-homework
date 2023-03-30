@@ -35,18 +35,20 @@ generateBtn.addEventListener("click", writePassword);
 
 //character length
 function generatePassword() {
-  lengthSelect = prompt("Select length of password, 8 to 128")
-  console.log(lengthSelect + ",Selected");
+  userInput = prompt("Select length of password, 8 to 128")
+  console.log(userInput+ ",Selected");
   
-  if (!lengthSelect) {
+  if (!userInput) {
     alert("Error! Need input!")
   }
-  else if (lengthSelect <8 || lengthSelect >128) {
-  lengthSelect = alert("Select a length BETWEEN 8 to 128!"); 
-  console.log(lengthSelect + ",Selected");
+  else if (userInput <8 || userInput >128) {
+  userInput = alert("Select a length BETWEEN 8 to 128!"); 
+  console.log(userInput+ ",Selected");
+  return;
   }
+
   //confirm script
-  else {
+   function results () {
     specialConfirm = confirm("Does your password need Special Characters? Press 'Ok' for 'Yes'.")
     console.log("Special Characters are  " + specialConfirm)
     numbersConfirm = confirm("Does your password need Numbers? Press 'Ok' for 'Yes'.")
@@ -55,30 +57,37 @@ function generatePassword() {
     console.log("Lowercase is " + lowerConfirm)
     upperConfirm= confirm("Does your password need Uppercase Letters? Press 'Ok' for 'Yes'.")
     console.log("Uppercase is " + upperConfirm)
-  }
+  
+  
 // Selections of Confirm Section
 
+ 
+  if (!specialConfirm && !numbersConfirm && !lowerConfirm && !upperConfirm) {
+  alert("At least ONE selection must be made!");
+  return;
+} else {
   if (specialConfirm) {
     selections = selections.concat(special);
   }
-
   if (numbersConfirm) {
     selections = selections.concat(numbers);
   }
-
   if (lowerConfirm) {
-    selections = selections.concat(alphabet)
+    selections = selections.concat(alphabet);
   }
-
   if (upperConfirm) {
-    selections = selections.concat(cap)
+    selections = selections.concat(cap);
   }
- console.log(selections)
-
-  function randomizer(){
-    results = [selections]
-  return results[Math.floor(Math.random()*prompt.length)]
-  }
-  console.log(randomizer)
-
 }
+   }
+  console.log(selections)
+  results(); 
+
+  randomizer = '';
+  for (i = 0; i< userInput; i++) {
+    freyja= Math.floor(Math.random()*selections.length);
+    randomizer += selections[freyja]
+  }
+  return randomizer
+}
+
