@@ -23,9 +23,11 @@ THEN the password is either displayed in an alert or written to the page"
 ```
 
 ## Screenshots of Generator 
+<img src =pwgnen.png>
+
 
 ## Link to Application
-
+https://karaulfger.github.io/javascript-homework/
 
 ## Credits
 Karathesymbiote, UW Coding Bootcamp Starter Code, and all the wonderful help from Bootcamp Staff and Students
