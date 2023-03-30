@@ -23,7 +23,7 @@ THEN the password is either displayed in an alert or written to the page"
 ```
 
 ## Screenshots of Generator 
-<img src =pwgnen.png>
+<img src =./pwgnen.png>
 
 
 ## Link to Application
