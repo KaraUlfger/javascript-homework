@@ -30,5 +30,5 @@ THEN the password is either displayed in an alert or written to the page"
 https://karaulfger.github.io/javascript-homework/
 
 ## Credits
-Karathesymbiote, UW Coding Bootcamp Starter Code, and all the wonderful help from Bootcamp Staff and Students
+Karathesymbiote and Rev Ghoul, UW Coding Bootcamp Starter Code, and all the wonderful help from Bootcamp Staff and Students
 
